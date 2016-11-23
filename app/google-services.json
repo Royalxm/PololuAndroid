@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "268552924660",
+    "firebase_url": "https://robotics-17a2b.firebaseio.com",
+    "project_id": "robotics-17a2b",
+    "storage_bucket": "robotics-17a2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268552924660:android:7577a885e12e8004",
+        "android_client_info": {
+          "package_name": "com.studio.roy.pololuandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268552924660-vts7vnvsu295i8c5bai7pole2k303lid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.studio.roy.pololuandroid",
+            "certificate_hash": "5700152742D62FCB8B77836F77B7A8175B29AC8F"
+          }
+        },
+        {
+          "client_id": "268552924660-7edi3jrq3v1b7eufedsar0p75ggde6r9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCsg_dq0neC6w0PsSCDp2dHBmHRKc-U_Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268552924660-a0s8oubb2bafpjqr7ibvipvhimm1jphl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.studio.roy.pololuandroid"
+              }
+            },
+            {
+              "client_id": "268552924660-7edi3jrq3v1b7eufedsar0p75ggde6r9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
