@@ -3,24 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.0.0_86fe3f0619c06000a66fdfe10d12c261ebb537e7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.0.0_1d01c58d2fa5686d48c6bcc0ba7b29570ea6fa87.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -48,39 +30,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.8.0_f760c25e38ae04c3936f45ee214ab85e6480e409.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_dc4ca1799b9d5d0d6e935343598fd2d264e7a87b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.8.0_3049afc64915be6169482b28ca7f37201caa2762.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.8.0_311a9b7725b0f4986c9db601dbe3f7f8f9e630ee.jar" />
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.8.0_7350a2c07333459cfcbefe15b7c6ca184c8afd84.jar" />
     </item>
     <item
         is-multidex="false"
@@ -99,15 +54,6 @@
         revision="23.0.3"
         sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
         <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_0d1a632e7016c7db7c0d551e11eb0af924107851.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_9d2a206051b2f3f499bddfd868ec6002b44f93a7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -147,6 +93,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-beta4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.0.0-beta4_b749733905f7d9ae2f8dbe9789c94ca88311d4c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -162,6 +117,87 @@
         revision="23.0.3"
         sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
         <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-9.8.0_ab0bd04597180cd12547d2e70f710aac138d6faa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.0.0_86fe3f0619c06000a66fdfe10d12c261ebb537e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.0.0_1d01c58d2fa5686d48c6bcc0ba7b29570ea6fa87.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.8.0_f760c25e38ae04c3936f45ee214ab85e6480e409.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_dc4ca1799b9d5d0d6e935343598fd2d264e7a87b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.8.0_3049afc64915be6169482b28ca7f37201caa2762.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.8.0_a06203c1b4ade213f0724077d384a99832a1f1a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.8.0_311a9b7725b0f4986c9db601dbe3f7f8f9e630ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_9d2a206051b2f3f499bddfd868ec6002b44f93a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Royal\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-beta4_c3096363876266341e872ee380703735e352c58d.jar" />
     </item>
 
 </items>
