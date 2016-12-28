@@ -39,6 +39,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.studio.roy.pololuandroid.Class.User;
+import com.studio.roy.pololuandroid.Class.Users.DatabaseUser;
 import com.studio.roy.pololuandroid.R;
 
 import java.util.ArrayList;
@@ -74,6 +75,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
     private FirebaseAuth mAuth;
+    DatabaseUser databaseUser;
     private FirebaseAuth.AuthStateListener mAuthListener;
 String TAG = "firebase";
     @Override
@@ -85,6 +87,9 @@ String TAG = "firebase";
         populateAutoComplete();
         mAuth = FirebaseAuth.getInstance();
         mPasswordView = (EditText) findViewById(R.id.password);
+
+        mLoginFormView = findViewById(R.id.login_form);
+        mProgressView = findViewById(R.id.login_progress);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -97,6 +102,14 @@ String TAG = "firebase";
         });
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+         databaseUser = new DatabaseUser(this);
+
+        if(databaseUser.getUsersCount() != 0){
+            User userdb = databaseUser.getAllUser();
+            mPasswordView.setText(userdb.getPassword());
+            mEmailView.setText(userdb.getEmail());
+            attemptLogin();
+        }
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,8 +119,6 @@ String TAG = "firebase";
 
 
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
     }
 
     private void populateAutoComplete() {
@@ -170,7 +181,7 @@ String TAG = "firebase";
 
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        final String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -223,18 +234,16 @@ String TAG = "firebase";
 
                                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                 if (user != null) {
-                                    User users = new User();
 
-                                    users.setEmail(user.getEmail());
-                                    users.setName(user.getDisplayName());
-
-                                    users.setUser(FirebaseAuth.getInstance());
-
-
+                                    if(databaseUser.getUsersCount() == 0){
+                                       databaseUser.insertUser(mEmailView.getText().toString(),mPasswordView.getText().toString());
+                                        attemptLogin();
+                                    }
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
                                  //   intent.putExtra("User", users);
                                     startActivity(intent);
+                                    finish();
                                 }
                             }
 
@@ -245,16 +254,7 @@ String TAG = "firebase";
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 // Name, email address, and profile photo Url
-                String name = user.getDisplayName();
-                String esmail = user.getEmail();
-                Uri photoUrl = user.getPhotoUrl();
 
-                // The user's ID, unique to the Firebase project. Do NOT use this value to
-                // authenticate with your backend server, if you have one. Use
-                // FirebaseUser.getToken() instead.
-                String uid = user.getUid();
-
-                Log.d(TAG,esmail);
             }
 
             showProgress(false);

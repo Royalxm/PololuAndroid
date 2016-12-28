@@ -15,6 +15,7 @@ public class User  {
 
     String name;
     String email;
+    String password;
     Uri photoUrl;
     FirebaseAuth user;
 
@@ -54,5 +55,11 @@ public class User  {
         this.user = user;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

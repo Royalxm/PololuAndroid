@@ -1,109 +1,259 @@
 package com.studio.roy.pololuandroid.Fragment;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
+import com.studio.roy.pololuandroid.Class.ListeTour.PhotoDatabase;
+import com.studio.roy.pololuandroid.Class.ListeTour.TourDatabase;
+import com.studio.roy.pololuandroid.Class.Utils.DbBitmapUtility;
 import com.studio.roy.pololuandroid.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link InfoFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link InfoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class InfoFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
+
+public class InfoFragment extends Fragment {
+    String TAG ="firebase";
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    private OnFragmentInteractionListener mListener;
-
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+    private ProgressBar mProgressBar;
+    private Button mButton;
+    Button syncro;
+    File localFile;
+    private StorageReference mStorageRef;
+    Bitmap myBitmap;
+    String idkey;
+    List<String> nameList;
+    List<Integer> idkeyList;
+    int listIncrement = 0;
+     int wait = 0;
     public InfoFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment InfoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static InfoFragment newInstance(String param1, String param2) {
-        InfoFragment fragment = new InfoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_info, container, false);
+        syncro = (Button)view.findViewById(R.id.buttonGetValue);
+        database = FirebaseDatabase.getInstance();
+
+
+
+        syncro.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                BigCalcul calcul=new BigCalcul();
+                calcul.execute();
+
+            }
+
+        });
+        return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+
+    private class BigCalcul extends AsyncTask<Void, Integer, Void>
+    {
+        int progress;
+        AlertDialog.Builder builder;
+        AlertDialog dialog;
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Toast.makeText(getActivity(), "Début du traitement asynchrone", Toast.LENGTH_LONG).show();
+            builder = new AlertDialog.Builder(getActivity());
+
+            builder.setMessage("value:")
+                    .setTitle("test");
+
+            dialog = builder.create();
+            dialog.show();
+
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values){
+            super.onProgressUpdate(values);
+
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+
+            progress = 0;
+            idkeyList =  new ArrayList<Integer>();
+            nameList = new ArrayList<String>();
+            listIncrement = 0;
+
+            final TourDatabase tourDatabase = new TourDatabase(getActivity());
+            final PhotoDatabase photoDatabase = new PhotoDatabase(getActivity());
+            tourDatabase.deleteTable();
+            photoDatabase.deleteTable();
+            mStorageRef = FirebaseStorage.getInstance().getReference();
+            myRef = database.getReference("ListeTour");
+            myRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    String value = dataSnapshot.getValue().toString();
+
+                    for (DataSnapshot alert: dataSnapshot.getChildren()) {
+                      //  System.out.println("Id : "+alert.getKey());
+                     //   System.out.println("Etat: " + alert.child("Etat").getValue());
+                        String etat ="";
+                        String id = alert.getKey();
+                        if(alert.child("Etat").getValue() == null){
+                            etat = "1";
+                        }
+                        else{
+                            etat = alert.child("Etat").getValue().toString();
+                        }
+                        tourDatabase.insertTour(alert.getKey(),alert.getKey(),etat);
+                        idkey = alert.getKey();
+
+
+                        for (final DataSnapshot recipient: alert.child("ListePhoto").getChildren()) {
+
+                            nameList.add(idkey);
+                        //    System.out.println("Photo :" + recipient.child("Name").getValue());
+                            String name = recipient.child("Name").getValue().toString();
+                            StorageReference riversRef = mStorageRef.child("images/"+id+"/"+name+".jpg");
+
+/*
+
+                            riversRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    // Got the download URL for 'users/me/profile.png'
+                                    Log.d("url2:",uri.toString());
+                                    photoDatabase.insertPhoto(Integer.toString(idkey), uri.toString(), null);
+
+
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                }
+                            });
+                            */
+                           final long ONE_MEGABYTE = 1024 * 1024;
+                            riversRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                                @Override
+                                public void onSuccess(byte[] bytes) {
+                                    // Data for "images/island.jpg" is returns, use this as needed
+                                    photoDatabase.insertPhoto(nameList.get(listIncrement), recipient.child("Name").getValue().toString(), bytes);
+                                    Log.d("ok",nameList.get(listIncrement));
+                                    listIncrement++;
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                }
+                            });
+
+
+                        /*    localFile = null;
+                                    try {
+                                        localFile = File.createTempFile( recipient.child("Name").getValue().toString(), "jpeg");
+                                        riversRef.getFile(localFile)
+                                                .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                                                    @Override
+                                                    public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                                        // Successfully downloaded data to local file
+                                                        // ...
+                                                        Toast.makeText(getActivity(), "Good Download :)", Toast.LENGTH_SHORT).show();
+                                                        if (localFile.exists()) {
+
+                                                            myBitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+                                                            System.out.println("Photo fuck " + recipient.child("Name").getValue().toString() );
+                                                            if (myBitmap != null) {
+                                                                photoDatabase.insertPhoto(Integer.toString(idkey), recipient.child("Name").getValue().toString(), DbBitmapUtility.getBytes(myBitmap));
+                                                                System.out.println("Photo fuck");
+                                                            }
+                                                        }
+                                                    }
+                                                }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception exception) {
+                                                // Handle failed download
+                                                // ...
+                                            }
+                                        });
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+        */
+                            }
+
+                        publishProgress(progress);
+                        progress++;
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            Toast.makeText(getActivity(), "Le traitement asynchrone est terminé", Toast.LENGTH_LONG).show();
+            dialog.cancel();
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
 }

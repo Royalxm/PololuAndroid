@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
-        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.0.0_f39fcf2c622f5f4078b677837bd3a9c2bef46329.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
         <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.8.0_7350a2c07333459cfcbefe15b7c6ca184c8afd84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.0.0_f39fcf2c622f5f4078b677837bd3a9c2bef46329.jar" />
     </item>
     <item
         is-multidex="false"
@@ -165,12 +165,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Royal\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_cef2467fd44d282cff984ee1f0d45a2571707974.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="5f47ede9561595584dca71104baa0fecb36dda87">
         <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.8.0_a06203c1b4ade213f0724077d384a99832a1f1a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.0.1_4d5aeea32b7b878f97b0582ae26afc9d3aeec81a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -183,12 +201,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-common-9.8.0_5afafa3323a7137ce04d8a5377d7bff6de16b4f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_9d2a206051b2f3f499bddfd868ec6002b44f93a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Master\android\PololuAndroid\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="D:\Master\android\PololuAndroid\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-9.8.0_635c6d299108662f4e16e2d5790e605d8204e14a.jar" />
     </item>
     <item
         is-multidex="false"

@@ -19,8 +19,13 @@ public class ControlFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     Button avancer;
+    Button droite;
+    Button gauche;
+    Button stop;
+    Button control;
     Button reculer;
     Button photo;
+    boolean controlRobot = false;
 
     FirebaseDatabase database;
     public ControlFragment() {
@@ -43,8 +48,68 @@ public class ControlFragment extends Fragment {
         avancer = (Button)view.findViewById(R.id.buttonAvancer);
         reculer = (Button)view.findViewById(R.id.buttonReculer);
         photo = (Button)view.findViewById(R.id.buttonPhoto);
+        droite = (Button)view.findViewById(R.id.buttonDroite);
+        gauche = (Button)view.findViewById(R.id.buttonGauche);
+        stop = (Button)view.findViewById(R.id.buttonStop);
+        control = (Button)view.findViewById(R.id.buttonControl);
 
         database = FirebaseDatabase.getInstance();
+
+        if(controlRobot){
+            avancer.setEnabled(true);
+            reculer.setEnabled(true);
+            droite.setEnabled(true);
+            gauche.setEnabled(true);
+            stop.setEnabled(true);
+            photo.setEnabled(true);
+        }else{
+            avancer.setEnabled(false);
+            reculer.setEnabled(false);
+            droite.setEnabled(false);
+            gauche.setEnabled(false);
+            stop.setEnabled(false);
+            photo.setEnabled(false);
+
+        }
+
+        control.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                DatabaseReference myRef = database.getReference("RobotControl");
+                if(controlRobot){
+                    myRef.child("NewPath").setValue(1);
+                    myRef.child("Manuel").setValue(0);
+                    controlRobot = false;
+                    control.setText("Passer en manuel");
+                }else {
+                    myRef.child("Manuel").setValue(1);
+                    myRef.child("NewPath").setValue(0);
+                    controlRobot = true;
+                    control.setText("Passer en automatique");
+                }
+                if(controlRobot){
+                    avancer.setEnabled(true);
+                    reculer.setEnabled(true);
+                    droite.setEnabled(true);
+                    gauche.setEnabled(true);
+                    stop.setEnabled(true);
+                    photo.setEnabled(true);
+                }else{
+                    avancer.setEnabled(false);
+                    reculer.setEnabled(false);
+                    droite.setEnabled(false);
+                    gauche.setEnabled(false);
+                    stop.setEnabled(false);
+                    photo.setEnabled(false);
+
+                }
+            }
+
+        });
+
+
+
 
         avancer.setOnTouchListener(new View.OnTouchListener() {
 
@@ -75,6 +140,57 @@ public class ControlFragment extends Fragment {
                         break;
                     case MotionEvent.ACTION_UP:
                         myRef.child("Recule").setValue(0);
+                        break;
+                }
+                return true;
+
+            }
+        });
+        droite.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                DatabaseReference myRef = database.getReference("RobotControl");
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        myRef.child("Droite").setValue(1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        myRef.child("Droite").setValue(0);
+                        break;
+                }
+                return true;
+
+            }
+        });
+        gauche.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                DatabaseReference myRef = database.getReference("RobotControl");
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        myRef.child("Gauche").setValue(1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        myRef.child("Gauche").setValue(0);
+                        break;
+                }
+                return true;
+
+            }
+        });
+        stop.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                DatabaseReference myRef = database.getReference("RobotControl");
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        myRef.child("Stop").setValue(1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        myRef.child("Stop").setValue(0);
                         break;
                 }
                 return true;
