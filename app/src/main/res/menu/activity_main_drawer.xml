@@ -5,11 +5,11 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Photo" />
+            android:title="Liste tour" />
         <item
             android:id="@+id/nav_control"
             android:icon="@drawable/ic_router_black_24dp"
-            android:title="Control" />
+            android:title="Control manuel" />
         <item
             android:id="@+id/nav_streaming"
             android:icon="@drawable/ic_menu_slideshow"
@@ -17,7 +17,11 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Draw" />
+        <item
+            android:id="@+id/nav_gyroscop"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Control Gyros" />
     </group>
 
     <item android:title="Communicate">

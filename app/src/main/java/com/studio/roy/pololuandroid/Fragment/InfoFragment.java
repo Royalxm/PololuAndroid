@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -34,6 +37,8 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 import com.studio.roy.pololuandroid.Class.ListeTour.PhotoDatabase;
 import com.studio.roy.pololuandroid.Class.ListeTour.TourDatabase;
+import com.studio.roy.pololuandroid.Class.Notification.DatabaseNotification;
+import com.studio.roy.pololuandroid.Class.Notification.Notification;
 import com.studio.roy.pololuandroid.Class.Utils.DbBitmapUtility;
 import com.studio.roy.pololuandroid.R;
 
@@ -50,6 +55,9 @@ public class InfoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     FirebaseDatabase database;
+    PhotoDatabase photoDatabase;
+    TourDatabase tourDatabase;
+    DatabaseNotification databaseNotification;
     DatabaseReference myRef;
     private ProgressBar mProgressBar;
     private Button mButton;
@@ -77,9 +85,46 @@ public class InfoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_info, container, false);
+        ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle("Panel");
         syncro = (Button)view.findViewById(R.id.buttonGetValue);
-        database = FirebaseDatabase.getInstance();
+        TextView textViewPhoto = (TextView)view.findViewById(R.id.textViewNbPhoto);
+        TextView textViewTour = (TextView)view.findViewById(R.id.textViewNbtour);
+        TextView textViewTourdetect = (TextView)view.findViewById(R.id.textViewNbIntru);
+        TextView textViewService = (TextView)view.findViewById(R.id.textViewStatus);
 
+
+
+
+        database = FirebaseDatabase.getInstance();
+        photoDatabase = new PhotoDatabase(getActivity());
+        tourDatabase = new TourDatabase(getActivity());
+        databaseNotification = new DatabaseNotification(getActivity());
+
+        textViewPhoto.setText(Integer.toString(photoDatabase.getPhotoCount()));
+        textViewTour.setText(Integer.toString(tourDatabase.getTourCount()));
+        textViewTourdetect.setText(Integer.toString(tourDatabase.getTourDetectionCount()));
+
+
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+        myRef = database.getReference("Service");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String value = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
 
 
         syncro.setOnClickListener(new View.OnClickListener() {

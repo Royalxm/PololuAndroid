@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.SurfaceView;
 import android.view.View;
@@ -21,7 +23,7 @@ import com.studio.roy.pololuandroid.SurfaceView.DrawCanvas;
 public class DrawFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-
+    DrawCanvas mycanvas;
     public DrawFragment() {
         // Required empty public constructor
     }
@@ -40,7 +42,9 @@ public class DrawFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          view = inflater.inflate(R.layout.fragment_draw, container, false);
-
+        ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle("Draw");
         DrawCanvas mycanvas = (DrawCanvas) view.findViewById(R.id.DrawingImageView);
         mycanvas.setOnClickListener(clickListener);
         String value = "111111123";
@@ -61,13 +65,19 @@ public class DrawFragment extends Fragment {
         public void onClick(View v) {
             // TODO Auto-generated method stub
             if (!isDrawn) {
-                DrawCanvas mycanvas = (DrawCanvas) view.findViewById(R.id.DrawingImageView);
-                mycanvas.startDrawImage();
+                 mycanvas = (DrawCanvas) view.findViewById(R.id.DrawingImageView);
+                mycanvas.startDrawImage(getActivity());
+
                 isDrawn = true;
             }
         }
     };
 
+    @Override
+    public void onPause() {
+        super.onPause();
+       // mycanvas.surfaceDestroyed();
+    }
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

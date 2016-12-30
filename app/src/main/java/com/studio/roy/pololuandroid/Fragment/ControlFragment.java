@@ -1,9 +1,15 @@
 package com.studio.roy.pololuandroid.Fragment;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,6 +19,8 @@ import android.widget.Button;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.studio.roy.pololuandroid.R;
+import com.studio.roy.pololuandroid.SurfaceView.DrawCanvas;
+import com.studio.roy.pololuandroid.SurfaceView.value;
 
 
 public class ControlFragment extends Fragment {
@@ -24,9 +32,10 @@ public class ControlFragment extends Fragment {
     Button stop;
     Button control;
     Button reculer;
+    DrawCanvas mycanvas;
     Button photo;
     boolean controlRobot = false;
-
+    View view;
     FirebaseDatabase database;
     public ControlFragment() {
         // Required empty public constructor
@@ -43,8 +52,10 @@ public class ControlFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_control, container, false);
-
+         view = inflater.inflate(R.layout.fragment_control, container, false);
+        ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle("Control");
         avancer = (Button)view.findViewById(R.id.buttonAvancer);
         reculer = (Button)view.findViewById(R.id.buttonReculer);
         photo = (Button)view.findViewById(R.id.buttonPhoto);
@@ -54,7 +65,9 @@ public class ControlFragment extends Fragment {
         control = (Button)view.findViewById(R.id.buttonControl);
 
         database = FirebaseDatabase.getInstance();
-
+        DrawCanvas mycanvas = (DrawCanvas) view.findViewById(R.id.videoView);
+        mycanvas.setOnClickListener(clickListener);
+        ((value) getActivity().getApplication()).setSomeVariable("0");
         if(controlRobot){
             avancer.setEnabled(true);
             reculer.setEnabled(true);
@@ -78,6 +91,7 @@ public class ControlFragment extends Fragment {
             public void onClick(View arg0) {
                 DatabaseReference myRef = database.getReference("RobotControl");
                 if(controlRobot){
+
                     myRef.child("NewPath").setValue(1);
                     myRef.child("Manuel").setValue(0);
                     controlRobot = false;
@@ -118,9 +132,11 @@ public class ControlFragment extends Fragment {
                 DatabaseReference myRef = database.getReference("RobotControl");
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
+                        ((value) getActivity().getApplication()).setValue(1);
                         myRef.child("Avance").setValue(1);
                         break;
                     case MotionEvent.ACTION_UP:
+                        ((value) getActivity().getApplication()).setValue(0);
                         myRef.child("Avance").setValue(0);
                         break;
                 }
@@ -211,17 +227,113 @@ public class ControlFragment extends Fragment {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
+
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+        private boolean isDrawn = false;
+        @Override
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+            if (!isDrawn) {
+                mycanvas = (DrawCanvas) view.findViewById(R.id.videoView);
+                mycanvas.startDrawImage(getActivity());
+
+                isDrawn = true;
+            }
+        }
+    };
 
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public class MyView extends View {
+
+
+
+        class Pt{
+
+            float x, y;
+
+
+
+            Pt(float _x, float _y){
+
+                x = _x;
+
+                y = _y;
+
+            }
+
+        }
+
+
+
+        Pt[] myPath = { new Pt(100, 100),
+
+                new Pt(200, 200),
+
+                new Pt(200, 500),
+
+                new Pt(400, 500),
+
+                new Pt(400, 200)
+
+        };
+
+
+
+        public MyView(Context context) {
+
+            super(context);
+
+            // TODO Auto-generated constructor stub
+
+        }
+
+
+
+        @Override
+
+        protected void onDraw(Canvas canvas) {
+
+            // TODO Auto-generated method stub
+
+            super.onDraw(canvas);
+
+
+
+
+
+            Paint paint = new Paint();
+
+            paint.setColor(Color.WHITE);
+
+            paint.setStrokeWidth(3);
+
+            paint.setStyle(Paint.Style.STROKE);
+
+            Path path = new Path();
+
+
+
+            path.moveTo(myPath[0].x, myPath[0].y);
+
+            for (int i = 1; i < myPath.length; i++){
+
+                path.lineTo(myPath[i].x, myPath[i].y);
+
+            }
+
+            canvas.drawPath(path, paint);
+
+
+
+        }
+
+
+
     }
 }

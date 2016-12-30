@@ -38,7 +38,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.studio.roy.pololuandroid.Class.User;
+import com.studio.roy.pololuandroid.Class.Users.User;
 import com.studio.roy.pololuandroid.Class.Users.DatabaseUser;
 import com.studio.roy.pololuandroid.R;
 
@@ -120,6 +120,8 @@ String TAG = "firebase";
 
 
     }
+
+
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {

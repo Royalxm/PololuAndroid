@@ -2,6 +2,7 @@ package com.studio.roy.pololuandroid.Class.ListeTour;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,14 +36,15 @@ public class TourArrayAdapter extends ArrayAdapter<Tour> {
         View rowView = inflater.inflate(R.layout.list_tour, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.textView4);
         TextView textViewid = (TextView) rowView.findViewById(R.id.textView3);
+        CardView CardViewTour = (CardView) rowView.findViewById(R.id.CardViewTour);
 
         textView.setText(values.get(position).getNameTour());
         textViewid.setText(values.get(position).getId());
 
         if(Integer.parseInt(values.get(position).getEtatTour() ) == 0)
-             rowView.setBackgroundColor(Color.GREEN);
+            CardViewTour.setCardBackgroundColor(Color.GREEN);
         else
-            rowView.setBackgroundColor(Color.RED);
+            CardViewTour.setBackgroundColor(Color.RED);
         // change the icon for Windows and iPhone
       //  String s = values[position];
 

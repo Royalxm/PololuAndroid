@@ -91,6 +91,24 @@ public class TourDatabase  extends SQLiteOpenHelper{
         return  arraylist;
     }
 
+    public int getTourCount() {
+        String countQuery = "SELECT  * FROM " + CONTACTS_TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int cnt = cursor.getCount();
+        cursor.close();
+        return cnt;
+    }
+
+    public int getTourDetectionCount() {
+        String countQuery = "SELECT  * FROM " + CONTACTS_TABLE_NAME + " WHERE "+CONTACTS_COLUMN_Alert+"= 1";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int cnt = cursor.getCount();
+        cursor.close();
+        return cnt;
+    }
+
     public  void deleteTable(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM "+CONTACTS_TABLE_NAME+"");

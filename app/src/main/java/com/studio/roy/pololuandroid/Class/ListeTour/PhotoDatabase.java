@@ -103,4 +103,13 @@ public class PhotoDatabase  extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM "+CONTACTS_TABLE_NAME+"");
     }
+
+    public int getPhotoCount() {
+        String countQuery = "SELECT  * FROM " + CONTACTS_TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int cnt = cursor.getCount();
+        cursor.close();
+        return cnt;
+    }
 }

@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import com.studio.roy.pololuandroid.Class.Users.DatabaseUser;
 import com.studio.roy.pololuandroid.Fragment.ControlFragment;
 import com.studio.roy.pololuandroid.Fragment.DrawFragment;
+import com.studio.roy.pololuandroid.Fragment.GyroscopFragment;
 import com.studio.roy.pololuandroid.Fragment.InfoFragment;
 import com.studio.roy.pololuandroid.Fragment.PhotoFragment;
 import com.studio.roy.pololuandroid.Fragment.StreamingFragment;
@@ -97,7 +98,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_name) {
+            Intent intent = new Intent(this, ListNotificationActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -120,7 +123,9 @@ public class MainActivity extends AppCompatActivity
             fragment = new StreamingFragment();
         } else if (id == R.id.nav_manage) {
             fragment = new DrawFragment();
-        } else if (id == R.id.nav_deco) {
+        }else if (id == R.id.nav_gyroscop) {
+            fragment = new GyroscopFragment();
+        }  else if (id == R.id.nav_deco) {
             DatabaseUser databaseUser = new DatabaseUser(this);
         databaseUser.deletetable();
             finish();
