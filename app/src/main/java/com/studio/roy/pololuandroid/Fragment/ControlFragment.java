@@ -36,6 +36,7 @@ public class ControlFragment extends Fragment {
     Button photo;
     boolean controlRobot = false;
     View view;
+    int value;
     FirebaseDatabase database;
     public ControlFragment() {
         // Required empty public constructor
@@ -75,6 +76,7 @@ public class ControlFragment extends Fragment {
             gauche.setEnabled(true);
             stop.setEnabled(true);
             photo.setEnabled(true);
+
         }else{
             avancer.setEnabled(false);
             reculer.setEnabled(false);
@@ -101,6 +103,7 @@ public class ControlFragment extends Fragment {
                     myRef.child("NewPath").setValue(0);
                     controlRobot = true;
                     control.setText("Passer en automatique");
+                    value = 0;
                 }
                 if(controlRobot){
                     avancer.setEnabled(true);
@@ -132,11 +135,12 @@ public class ControlFragment extends Fragment {
                 DatabaseReference myRef = database.getReference("RobotControl");
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        ((value) getActivity().getApplication()).setValue(1);
+                        ((value) getActivity().getApplication()).setValue(value);
+                        ((value) getActivity().getApplication()).setActionValue(1);
                         myRef.child("Avance").setValue(1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        ((value) getActivity().getApplication()).setValue(0);
+                        ((value) getActivity().getApplication()).setActionValue(0);
                         myRef.child("Avance").setValue(0);
                         break;
                 }
@@ -152,10 +156,15 @@ public class ControlFragment extends Fragment {
                 DatabaseReference myRef = database.getReference("RobotControl");
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
+                        value = value +2;
+                        ((value) getActivity().getApplication()).setValue(value);
+                        ((value) getActivity().getApplication()).setActionValue(1);
                         myRef.child("Recule").setValue(1);
                         break;
                     case MotionEvent.ACTION_UP:
+                        value = value -2;
                         myRef.child("Recule").setValue(0);
+                        ((value) getActivity().getApplication()).setActionValue(0);
                         break;
                 }
                 return true;
@@ -169,10 +178,14 @@ public class ControlFragment extends Fragment {
                 DatabaseReference myRef = database.getReference("RobotControl");
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
+                        value++;
+                        ((value) getActivity().getApplication()).setValue(value);
+                        ((value) getActivity().getApplication()).setActionValue(1);
                         myRef.child("Droite").setValue(1);
                         break;
                     case MotionEvent.ACTION_UP:
                         myRef.child("Droite").setValue(0);
+                        ((value) getActivity().getApplication()).setActionValue(0);
                         break;
                 }
                 return true;
@@ -186,10 +199,18 @@ public class ControlFragment extends Fragment {
                 DatabaseReference myRef = database.getReference("RobotControl");
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
+                        if(value == 0)
+                        {
+                            value = 3;
+                        }else
+                            value--;
+                        ((value) getActivity().getApplication()).setValue(value);
+                        ((value) getActivity().getApplication()).setActionValue(1);
                         myRef.child("Gauche").setValue(1);
                         break;
                     case MotionEvent.ACTION_UP:
                         myRef.child("Gauche").setValue(0);
+                        ((value) getActivity().getApplication()).setActionValue(0);
                         break;
                 }
                 return true;
@@ -207,6 +228,7 @@ public class ControlFragment extends Fragment {
                         break;
                     case MotionEvent.ACTION_UP:
                         myRef.child("Stop").setValue(0);
+                        ((value) getActivity().getApplication()).setActionValue(0);
                         break;
                 }
                 return true;

@@ -14,6 +14,15 @@ public class value extends Application {
     private String someVariable;
     private int value;
     private List<pt> mylistPath =   new ArrayList<pt>();
+    private int actionValue;
+
+    public int getActionValue() {
+        return actionValue;
+    }
+
+    public void setActionValue(int actionValue) {
+        this.actionValue = actionValue;
+    }
 
     public String getSomeVariable() {
         return someVariable;

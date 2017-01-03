@@ -7,21 +7,11 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4d4cf17-49e1-4455-be42-1234963da4d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_database_connection_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_messaging_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_10_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/pt.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/value.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_auth_module_9_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_database_connection_9_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_9_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_9_8_0.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -29,72 +19,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/.gitignore" afterPath="$PROJECT_DIR$/app/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/proguard-rules.pro" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/studio/roy/pololuandroid/ExampleInstrumentedTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/studio/roy/pololuandroid/ExampleInstrumentedTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Activity/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Activity/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Activity/PhotoLisActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Activity/PhotoLisActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/Photo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/Photo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/PhotoArrayAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/PhotoArrayAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/PhotoDatabase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/PhotoDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/Tour.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/Tour.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/TourArrayAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/TourArrayAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/TourDatabase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/ListeTour/TourDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/User.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Users/DatabaseUser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Users/DatabaseUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Utils/DbBitmapUtility.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Utils/DbBitmapUtility.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/DrawFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/DrawFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/InfoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/InfoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/PhotoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/PhotoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/PhotoLisFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/PhotoLisFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/StreamingFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/StreamingFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/listViewInfoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/listViewInfoFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_photo_lis.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_photo_lis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_control.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_control.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_draw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_draw.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_view_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_list_view_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo_lis.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo_lis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_streaming.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_streaming.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_photo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_photo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_tour.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_tour.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/drawables.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/drawables.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/com/studio/roy/pololuandroid/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/com/studio/roy/pololuandroid/ExampleUnitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_9_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_database_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_impl_9_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_storage_common_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_auth_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_core_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_auth_common_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_impl_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_common_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_core_9_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_iid_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_database_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_storage_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_iid_9_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_auth_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_storage_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_common_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_storage_common_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_10_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_9_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_10_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/value.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/value.java" />
     </list>
     <ignored path="PololuAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,36 +56,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InfoFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/InfoFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="195" column="25" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="25" />
-              <folding>
-                <marker date="1483110075912" expanded="false" signature="55:423" ph="..." />
-                <marker date="1483110075912" expanded="true" signature="4826:5098" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="4890:5069" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="4958:5058" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="5172:12847" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="5317:5676" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="5754:5811" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="5883:12622" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="6478:12582" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="6574:12338" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="6745:6881" ph="//..." />
-                <marker date="1483110075912" expanded="false" signature="8394:8547" ph="(exception) → {" />
-                <marker date="1483110075912" expanded="false" signature="8633:8668" ph="}" />
-                <marker date="1483110075912" expanded="true" signature="8882:9434" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="8994:9404" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="9481:9731" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="9609:9701" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="12427:12568" ph="{...}" />
-                <marker date="1483110075912" expanded="true" signature="12692:12841" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DrawFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/DrawFragment.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -180,12 +79,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawCanvas.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DrawCanvas.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="54" column="48" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="48" />
-              <folding />
+            <state relative-caret-position="391">
+              <caret line="163" column="130" selection-start-line="163" selection-start-column="130" selection-end-line="163" selection-end-column="130" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1287#1296#0" expanded="true" />
+                <element signature="e#1347#1356#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,25 +103,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="value.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="value.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/value.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="321">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,13 +147,14 @@
       <file leaf-file-name="ControlFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="138" column="74" selection-start-line="138" selection-start-column="74" selection-end-line="138" selection-end-column="74" />
+            <state relative-caret-position="474">
+              <caret line="164" column="39" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
               <folding>
-                <element signature="e#3033#4356#0" expanded="true" />
-                <element signature="e#4355#4356#0" expanded="true" />
-                <element signature="e#4398#5147#0" expanded="true" />
-                <element signature="e#5146#5147#0" expanded="true" />
+                <element signature="e#3049#4403#0" expanded="true" />
+                <element signature="e#4402#4403#0" expanded="true" />
+                <element signature="e#4445#5288#0" expanded="true" />
+                <element signature="e#5287#5288#0" expanded="true" />
+                <marker date="1483389741601" expanded="false" signature="8253:8368" ph="(v, event) → {" />
               </folding>
             </state>
           </provider>
@@ -2131,10 +2039,10 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/DrawFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_control.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/pt.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/value.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java" />
       </list>
     </option>
   </component>
@@ -2344,6 +2252,54 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="pololuandroid" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PololuAndroid" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pololuandroid" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Class" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PololuAndroid" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pololuandroid" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Class" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2704,7 +2660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482884478953</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final push">
+      <created>1483137797817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1483137797817</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2761,23 +2724,24 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="f" />
-    <option name="LAST_COMMIT_MESSAGE" value="f" />
+    <MESSAGE value="Final push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_test.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3033#4356#0" expanded="true" />
-            <element signature="e#4355#4356#0" expanded="true" />
-            <element signature="e#4398#5147#0" expanded="true" />
-            <element signature="e#5146#5147#0" expanded="true" />
+            <element signature="e#3049#4403#0" expanded="true" />
+            <element signature="e#4402#4403#0" expanded="true" />
+            <element signature="e#4445#5288#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <marker date="1483389741601" expanded="false" signature="8253:8368" ph="(v, event) → {" />
           </folding>
         </state>
       </provider>
@@ -3094,14 +3058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Service/MyFirebaseMessagingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_control.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3124,13 +3080,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/pt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="119">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -3143,53 +3096,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Service/MyFirebaseMessagingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="138" column="74" selection-start-line="138" selection-start-column="74" selection-end-line="138" selection-end-column="74" />
-          <folding>
-            <element signature="e#3033#4356#0" expanded="true" />
-            <element signature="e#4355#4356#0" expanded="true" />
-            <element signature="e#4398#5147#0" expanded="true" />
-            <element signature="e#5146#5147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/pt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        <state relative-caret-position="204">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Class/Service/MyFirebaseInstanceIDService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="54" column="48" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="48" />
+        <state relative-caret-position="272">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/value.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="321">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/Fragment/ControlFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="164" column="39" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
+          <folding>
+            <element signature="e#3049#4403#0" expanded="true" />
+            <element signature="e#4402#4403#0" expanded="true" />
+            <element signature="e#4445#5288#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <marker date="1483389741601" expanded="false" signature="8253:8368" ph="(v, event) → {" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/studio/roy/pololuandroid/SurfaceView/DrawCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="163" column="130" selection-start-line="163" selection-start-column="130" selection-end-line="163" selection-end-column="130" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1287#1296#0" expanded="true" />
+            <element signature="e#1347#1356#0" expanded="true" />
           </folding>
         </state>
       </provider>

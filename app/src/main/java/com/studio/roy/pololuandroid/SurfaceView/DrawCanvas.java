@@ -53,6 +53,8 @@ public class DrawCanvas extends SurfaceView implements Callback {
     Pt[] myPath = { new Pt(100, 100)};
 
     List<Pt> mylistPath =   new ArrayList<Pt>();
+    List<Integer> mylistPathx =   new ArrayList<Integer>();
+    List<Integer> mylistPathy =   new ArrayList<Integer>();
 
     public DrawCanvas(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -75,7 +77,8 @@ public class DrawCanvas extends SurfaceView implements Callback {
         canvasThread.start();
         this.activity = act;
 
-        mylistPath.add(new Pt(100, 100));
+        mylistPathx.add(100);
+        mylistPathy.add(100);
     }
 
     @Override
@@ -139,18 +142,32 @@ public class DrawCanvas extends SurfaceView implements Callback {
 
 
 
-        path.moveTo(mylistPath.get(0).x, mylistPath.get(0).y);
+        path.moveTo(mylistPathx.get(0), mylistPathx.get(0));
 
-        if(((value) activity.getApplication()).getValue() == 1)
+        int precdx = mylistPathx.get(mylistPathx.size() - 1);
+        int precdy = mylistPathy.get(mylistPathy.size() - 1);
+        if(((value) activity.getApplication()).getValue()%4 == 0 && ((value) activity.getApplication()).getActionValue() == 1)
         {
 
-            mylistPath.add(new Pt(100, 100));
+         //   mylistPath.add(new Pt(100, 100));
 //            myPath[myPath.length +1] = new Pt(myPath[myPath.length].x + 10, myPath[myPath.length].y);
+            mylistPathx.add(precdx +1);
+            mylistPathy.add(precdy);
 
+        }else if(((value) activity.getApplication()).getValue()%4 == 1&& ((value) activity.getApplication()).getActionValue() == 1 ){
+            mylistPathx.add(precdx);
+            mylistPathy.add(precdy+1);
         }
-        for (int i = 1; i < mylistPath.size(); i++){
+        else if(((value) activity.getApplication()).getValue()%4 == 2&& ((value) activity.getApplication()).getActionValue() == 1){
+            mylistPathx.add(precdx -1);
+            mylistPathy.add(precdy);
+        }else if(((value) activity.getApplication()).getValue()%4 == 3&& ((value) activity.getApplication()).getActionValue() == 1){
+            mylistPathx.add(precdx);
+            mylistPathy.add(precdy-1);
+        }
+        for (int i = 1; i < mylistPathx.size(); i++){
 
-            path.lineTo(myPath[i].x, myPath[i].y);
+            path.lineTo( mylistPathx.get(i), mylistPathy.get(i));
 
         }
 
